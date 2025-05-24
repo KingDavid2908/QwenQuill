@@ -32,7 +32,6 @@ The application follows enterprise software engineering practices with modular a
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)](https://streamlit.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Powerful AI Writing Assistant powered by Qwen 3 | Professional text processing, analysis, and enhancement**
 
@@ -201,10 +200,6 @@ python -m pytest tests/
 # Start development server
 streamlit run app.py --server.runOnSave=true
 ```
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🆘 Support
 
