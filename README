@@ -1,0 +1,244 @@
+# Project Description
+
+**Qwen Quill** is an advanced AI-powered writing assistant that leverages the Qwen 3 32B language model through OpenRouter using Cerebras as a provider to provide comprehensive text processing and analysis capabilities. The application offers a modern, intuitive interface for writers, educators, and content creators to enhance their written work through various AI-driven features.
+
+## Key Features
+
+- **Comprehensive Text Polishing**: Intelligent grammar correction, style enhancement, and readability improvements
+- **Multi-language Translation**: Support for translation between various languages with context preservation
+- **AI Content Detection**: Advanced analysis to identify AI-generated content with confidence scoring
+- **Plagiarism Detection**: Web-based similarity checking with detailed source attribution
+- **Smart Summarization**: Intelligent text summarization maintaining key information and context
+- **Voice-to-Text Integration**: Real-time audio transcription using AssemblyAI's advanced speech recognition
+- **Multi-format Document Processing**: Support for PDF, DOCX, images (OCR), and plain text files
+- **Transformation History**: Complete audit trail of all text modifications with revert capabilities
+- **Custom Transformations**: Flexible text processing based on user-defined instructions
+
+## Technical Architecture
+
+Built on a robust foundation using:
+- **LangGraph**: State-based workflow management for complex AI processing pipelines
+- **Streamlit**: Modern web interface with responsive design
+- **OpenRouter**: Enterprise-grade API gateway for AI model access
+- **AssemblyAI**: Professional speech-to-text transcription services
+- **SerpAPI**: Real-time web search integration for plagiarism detection
+
+The application follows enterprise software engineering practices with modular architecture, comprehensive error handling, and scalable design patterns.
+
+---
+
+
+# 🖋️ Qwen Quill - AI Writing Assistant
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> **Powerful AI Writing Assistant powered by Qwen 3 | Professional text processing, analysis, and enhancement**
+
+Qwen Quill is a comprehensive AI writing assistant that transforms your writing workflow with advanced language processing capabilities. Whether you're polishing professional documents, detecting AI-generated content, or translating between languages, Qwen Quill provides enterprise-grade text processing in an intuitive web interface.
+
+## ✨ Features
+
+### 🎯 Core Writing Tools
+- **Comprehensive Polish**: Advanced grammar correction, style enhancement, and readability optimization
+- **Smart Summarization**: Intelligent text condensation while preserving key information
+- **Custom Transformations**: Flexible text processing based on your specific requirements
+- **Multi-language Translation**: Accurate translation with context preservation
+
+### 🔍 Analysis & Detection
+- **AI Content Detection**: Identify AI-generated text with confidence scoring and detailed analysis
+- **Plagiarism Check**: Web-based similarity detection with source attribution
+- **Content Analytics**: Detailed insights into text characteristics and quality metrics
+
+### 🎤 Input Methods
+- **Voice-to-Text**: Real-time audio transcription using AssemblyAI
+- **Document Upload**: Support for PDF, DOCX, images (OCR), and plain text files
+- **Direct Text Input**: Rich text editor with syntax highlighting
+
+### 📊 Workflow Management
+- **Transformation History**: Complete audit trail of all text modifications
+- **Revert Capabilities**: Easily restore previous versions of your text
+- **Session Persistence**: Maintain your work across browser sessions
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.8 or higher
+- OpenRouter API key ([Get one here](https://openrouter.ai/))
+- Optional: AssemblyAI API key for voice features
+- Optional: SerpAPI key for plagiarism detection
+
+### Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/KingDavid2908/QwenQuill
+cd QwenQuill
+```
+
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Configure environment variables**
+Create a `.env` file in the root directory:
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+ASSEMBLYAI_API_KEY=your_assemblyai_api_key_here  # Optional
+SERPAPI_API_KEY=your_serpapi_api_key_here        # Optional
+YOUR_SITE_URL=http://localhost:8501
+YOUR_SITE_NAME=YourSiteName
+```
+
+4. **Install Tesseract OCR** (for image text extraction)
+   - **Windows**: Download from [GitHub releases](https://github.com/UB-Mannheim/tesseract/wiki)
+   - **macOS**: `brew install tesseract`
+   - **Ubuntu/Debian**: `sudo apt-get install tesseract-ocr`
+
+5. **Launch the application**
+```bash
+streamlit run app.py
+```
+
+## 🔧 Configuration
+
+### API Keys Setup
+
+1. **OpenRouter** (Required)
+   - Sign up at [OpenRouter](https://openrouter.ai/)
+   - Generate an API key
+   - Add to your `.env` file
+
+2. **AssemblyAI** (Optional - for voice features)
+   - Register at [AssemblyAI](https://www.assemblyai.com/)
+   - Get your API key
+   - Add to your `.env` file
+
+3. **SerpAPI** (Optional - for plagiarism detection)
+   - Create account at [SerpAPI](https://serpapi.com/)
+   - Obtain API key
+   - Add to your `.env` file
+
+### Tesseract OCR Configuration
+
+For image text extraction, ensure Tesseract is installed and accessible:
+- **Windows**: Add Tesseract to your PATH or set `pytesseract.pytesseract.tesseract_cmd`
+- **Linux/macOS**: Usually automatically configured after installation
+
+## 🎯 Usage Examples
+
+### Basic Text Processing
+1. Launch the application
+2. Enter or paste your text in the editor
+3. Select a feature from the sidebar (e.g., "Comprehensive Polish")
+4. Click "Apply Feature" to process your text
+
+### Document Upload
+1. Click "Attach & Append" button
+2. Select your document (PDF, DOCX, or image)
+3. Text will be automatically extracted and added to the editor
+
+### Voice Input
+1. Ensure AssemblyAI API key is configured
+2. Click the microphone button
+3. Record your speech
+4. Transcribed text will be automatically added
+
+### Advanced Transformations
+1. Select "Advanced Transformations" from the sidebar
+2. Describe your desired transformation (e.g., "Make this more formal")
+3. Apply the transformation
+
+## 🏗️ Architecture
+
+### Core Components
+
+- **LangGraph Workflow**: State-based processing pipeline for complex AI operations
+- **Streamlit Interface**: Modern web UI with responsive design
+- **Modular Processors**: Specialized handlers for different input types and operations
+- **Session Management**: Persistent state management across user interactions
+
+### Data Flow
+
+```
+User Input → File/Voice Processing → LangGraph Workflow → AI Processing → Results Display
+     ↓                                      ↓
+History Management ←←←←←←←←←←←←←←←←←←←←←← State Management
+```
+
+## 🔐 Security & Privacy
+
+- All API keys are stored locally in environment variables
+- No user data is stored permanently on servers
+- Secure API communication with enterprise-grade endpoints
+- Optional local-only processing for sensitive documents
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Setup
+
+```bash
+# Clone your fork
+git clone https://github.com/KingDavid2908/QwenQuill
+cd QwenQuill
+
+# Install development dependencies
+pip install -r requirements.txt
+
+# Run tests
+python -m pytest tests/
+
+# Start development server
+streamlit run app.py --server.runOnSave=true
+```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+### Common Issues
+
+**Issue**: "OpenRouter API key not configured"
+**Solution**: Ensure your `.env` file contains a valid `OPENROUTER_API_KEY`
+
+**Issue**: "Tesseract OCR not found"
+**Solution**: Install Tesseract OCR for your operating system and ensure it's in your PATH
+
+**Issue**: "Voice transcription not working"
+**Solution**: Verify your AssemblyAI API key is correctly configured in the `.env` file
+
+## 🙏 Acknowledgments
+
+- **Qwen Team**: For the exceptional Qwen 3 language model
+- **OpenRouter**: For providing reliable AI model access
+- **AssemblyAI**: For professional speech-to-text capabilities
+- **Streamlit Team**: For the excellent web framework
+- **LangChain**: For the powerful AI application framework
+
+## 🔄 Changelog
+
+### v1.0.0 (Latest)
+- Initial release with full feature set
+- Comprehensive text processing capabilities
+- Multi-format document support
+- Voice-to-text integration
+- Advanced AI content detection
+- Plagiarism checking functionality
+
+---
+
+**Built with ❤️ by VectronixAI**
+
+*Transform your writing with the power of AI*
