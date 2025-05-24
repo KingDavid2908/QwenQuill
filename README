@@ -1,33 +1,3 @@
-# Project Description
-
-**Qwen Quill** is an advanced AI-powered writing assistant that leverages the Qwen 3 32B language model through OpenRouter using Cerebras as a provider to provide comprehensive text processing and analysis capabilities. The application offers a modern, intuitive interface for writers, educators, and content creators to enhance their written work through various AI-driven features.
-
-## Key Features
-
-- **Comprehensive Text Polishing**: Intelligent grammar correction, style enhancement, and readability improvements
-- **Multi-language Translation**: Support for translation between various languages with context preservation
-- **AI Content Detection**: Advanced analysis to identify AI-generated content with confidence scoring
-- **Plagiarism Detection**: Web-based similarity checking with detailed source attribution
-- **Smart Summarization**: Intelligent text summarization maintaining key information and context
-- **Voice-to-Text Integration**: Real-time audio transcription using AssemblyAI's advanced speech recognition
-- **Multi-format Document Processing**: Support for PDF, DOCX, images (OCR), and plain text files
-- **Transformation History**: Complete audit trail of all text modifications with revert capabilities
-- **Custom Transformations**: Flexible text processing based on user-defined instructions
-
-## Technical Architecture
-
-Built on a robust foundation using:
-- **LangGraph**: State-based workflow management for complex AI processing pipelines
-- **Streamlit**: Modern web interface with responsive design
-- **OpenRouter**: Enterprise-grade API gateway for AI model access
-- **AssemblyAI**: Professional speech-to-text transcription services
-- **SerpAPI**: Real-time web search integration for plagiarism detection
-
-The application follows enterprise software engineering practices with modular architecture, comprehensive error handling, and scalable design patterns.
-
----
-
-
 # 🖋️ Qwen Quill - AI Writing Assistant
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
